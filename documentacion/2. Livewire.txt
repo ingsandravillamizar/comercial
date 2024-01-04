@@ -1,0 +1,7 @@
+ 
+Creacion componente liverwire
+        php artisan make:livewire navigation   
+        crea archivo en app/Livewire  Navigation.php  un controlador que manda a llamar a la vista por un metodo render exclusivo de liverwire
+        y un elemento en las vistas resources/views/liverwire
+
+En layouts app.blade.php  cambiamos por  @livewire('navigation')     estaba en  @livewire('navigation-menu')

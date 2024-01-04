@@ -1,0 +1,28 @@
+1. Me ubico en cmd en www  y digito el siguiente comando
+    laravel new comercial --jet
+    seleccion livewire y php unit,   dark
+
+2. npm install
+3. configurar base de datos
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=comercial
+        DB_USERNAME=root
+        DB_PASSWORD=svillamizar
+
+
+4. php artisan migrate   (para que migre las tablas relacionadas con usuarios)
+
+5. npm run dev   ( en produccion npm run build)
+
+
+6. Crear el usuario por defecto para que cada vez que hagamos migracion lo cree
+        User::create([
+                    'name' => 'Sandra Milena Villamizar',
+                    'email'=> 'milena.villamizar@hotmail.com',
+                    'password' => bcrypt('12345678')
+                ]);
+
+7. php artisan migrate:refresh --seed
+ 
