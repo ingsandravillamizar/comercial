@@ -1,0 +1,16 @@
+
+https://tailwindcss.com/  para copiar el navbar
+https://tailwindui.com/components/application-ui/navigation/navbars
+
+
+Lo copiamos y lo pegamos en  navigation.blade.php
+
+coorer  npm run dev:   para renderizar y muestre bien el navbar       Corre el servicio de vite para renderizar los cambios css y javascript
+
+
+tailwind.config.js 
+    agregar:  
+    
+    corePlugins:{
+        container:false,
+    }

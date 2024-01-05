@@ -1,0 +1,9 @@
+ En confir jetstream  debo descomentar el profile photos para en el registro poder personalizar foto
+ 
+  'features' => [
+        Features::termsAndPrivacyPolicy(),
+        Features::profilePhotos(),
+        // Features::api(),
+        // Features::teams(['invitations' => true]),
+        Features::accountDeletion(),
+    ],

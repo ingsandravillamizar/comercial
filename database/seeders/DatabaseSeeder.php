@@ -6,6 +6,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,18 +16,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Storage::deleteDirectory('posts');
+        Storage::makeDirectory('posts');
 
-        User::create([
-            'name' => 'Sandra Milena Villamizar',
-            'email'=> 'milena.villamizar@hotmail.com',
-            'password' => bcrypt('12345678')
-        ]);
+
+        \App\Models\Role::factory(2)->create();
+       
+        $this->call(UserSeeder::class);
+        \App\Models\Author::factory(3)->create();
+
+        \App\Models\Category::factory(2)->create();
+        // \App\Models\Tag::factory(100)->create();
+        $this->call(PostSeeder::class);
+
+
 
     }
 }

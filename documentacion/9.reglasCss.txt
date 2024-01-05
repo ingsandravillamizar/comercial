@@ -1,0 +1,2 @@
+En resources css:  Crear arhcivo common.css
+En resources css  app.css debo importar  @import 'common.css';

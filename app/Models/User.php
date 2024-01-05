@@ -58,4 +58,43 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    //Relacion 1 a 1
+    // Para tomar los datos del autor  cuando se consulte el usuario
+    public function author(){
+        // $perfil = Author::where('user_id', $this->id)->first;
+        // return $perfil;
+
+        return $this->hasOne(Author::class);
+        // return $this->hasOne('App\Models\Author');
+    }
+
+    //Relacion 1 a muchos
+    public function  posts(){
+        return $this->hasmany('App\Models\Post');
+    }
+
+    //Relacion 1 a muchos
+    public function  videos(){
+        return $this->hasmany('App\Models\Videos');
+    }
+
+    //Relacion muchos a muchos
+    public function  roles(){
+        return $this->belongsToMany('App\Models\Role');
+    }
+
+    //Relacion uno a uno polimorfica
+    public function  image(){
+        return $this->morphOne('App\Models\Image','imageable');
+         //Con el metodo imageable  obtenemos la llave primaria
+    }
+
+    //Relacion 1 a muchos entre usuarios y comentarios
+    public function comments(){
+        return $this->hasmany('App\Models\Comment');
+    }
+
+    
 }

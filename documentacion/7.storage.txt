@@ -1,0 +1,6 @@
+eliminar carpeta y volver a generar      www-nombreproyecto-public   acceso directo storage
+php artisan storage:link   //Generar acceso direcot en la carpeta public
+
+config filesystems.php  :  'default' => env('FILESYSTEM_DISK', 'public'),
+.env   FILESYSTEM_DISK=public
+APP_URL=http://127.0.0.1:8000

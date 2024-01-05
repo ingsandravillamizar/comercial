@@ -1,0 +1,21 @@
+.container{
+    @apply mx-auto max-w-7xl px-2; 
+}
+
+@media(min-width:640px){
+    .container{
+        @apply px-6;
+    }
+
+}
+
+@media(min-width:1024px){
+    .container{
+        @apply px-8;
+    }
+
+}
+
+/* .container{
+    @apply   <div class="container mx-auto max-w-7xl px-2  bg-red-500"  >
+} */

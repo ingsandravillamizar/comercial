@@ -1,0 +1,14 @@
+El inicio de la pagina muestra post de noticias y capacitaciones que seria la parte publica
+
+    php artisan make:model Author -mf
+    php artisan make:model Category -mf
+    php artisan make:model Tag -mf
+    php artisan make:model Post -mf
+    php artisan make:model Taggable -m    //Taggable no necesita modelo
+    php artisan make:model Image -mf
+    php artisan make:model Video -mf
+    php artisan make:model Comment -mf
+
+
+    php artisan make:seeder PostSeeder
+   

@@ -1,0 +1,7 @@
+En views- welcome-blade.php
+podemos quitar todo y llamar 
+
+<x-app-layout>
+    hola
+</x-app-layout>
+
