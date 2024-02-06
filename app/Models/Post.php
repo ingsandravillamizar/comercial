@@ -10,7 +10,7 @@ class Post extends Model
     use HasFactory;
 
     
-    protected $guarded =['id','created_at', 'updated_at'];    //Para que me permita modificacion masiva
+    protected $guarded =['id','created_at', 'updated_at'];    //Para que me permita modificacion masiva, estos son los que no vamos a modificar..  el mismo sistema lo hace
 
 
     //Relacion Uno a muchos Post Users

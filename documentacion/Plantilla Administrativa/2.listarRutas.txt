@@ -1,0 +1,12 @@
+Listar rutas categorias
+php artisan r:l --name=admin.categories
+
+
+
+  GET|HEAD        admin/categories ......................... admin.categories.index › Admin\CategoryController@index
+  POST            admin/categories ......................... admin.categories.store › Admin\CategoryController@store  
+  GET|HEAD        admin/categories/create ................ admin.categories.create › Admin\CategoryController@create  
+  GET|HEAD        admin/categories/{category} ................ admin.categories.show › Admin\CategoryController@show  
+  PUT|PATCH       admin/categories/{category} ............ admin.categories.update › Admin\CategoryController@update  
+  DELETE          admin/categories/{category} .......... admin.categories.destroy › Admin\CategoryController@destroy  
+  GET|HEAD        admin/categories/{category}/edit ........... admin.categories.edit › Admin\CategoryController@edit

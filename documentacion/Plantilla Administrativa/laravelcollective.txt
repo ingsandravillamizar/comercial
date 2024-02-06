@@ -1,0 +1,3 @@
+laravel collective..  para formularios
+https://laravelcollective.com/docs/6.x/html#installation
+composer require laravelcollective/html

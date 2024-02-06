@@ -1,0 +1,29 @@
+donde creamos las reglas de validacion del post, para manejar cuando un post sea borrador o publicado
+se colocan los campos extract y body nullables en la migracion para poder manejar estas validaciones en el postrquest
+
+
+php artisan make:request  PostRequest
+
+
+
+
+
+ $post = $this->route()->parameter('post');
+        $rules=[
+            'name'=> 'required',
+            'slug' => 'required|unique:posts',
+            'status'=> 'required|in:1,2',
+            'file'=> 'image'     // validar que solo sea archivos de tipo imagen
+            
+        ];
+
+ 
+
+        if($this->status == 2){
+            $rules = array_merge($rules,  [    // ME HAce una union de los dos arrays
+                'category_id'=> 'required',
+                'tags' => 'required',
+                'extract' => 'required',
+                'body' => 'required'
+            ]);
+        } 

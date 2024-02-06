@@ -1,0 +1,24 @@
+Creacion componente liverwire
+        php artisan make:livewire Admin/PostIndex
+
+        Crea dos archivos:  app/liverwire/Admin/PostIndex.php             
+                            views/liverwire/admin/post-index.blade.php    Se encuentra dentro de las vistas
+
+
+        El primer archivo tiene el metodo render:  carga la vista que es el segundo archivo
+
+        public function render()
+           return view('livewire.admin.posts-index',  compact('posts'));
+    
+
+    En el archivo resources/views/admin/posts/index.blade.php
+    Llamamos el componente para que cargue esta seccion
+
+   
+
+    @section('content')
+          @livewire('admin.posts-index')
+    @stop
+
+
+    todo lo que haga dentro del posts-index   debe estar contenido dentro de un contenedor padre

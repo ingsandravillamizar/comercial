@@ -1,0 +1,25 @@
+https://github.com/jeroennoten/Laravel-AdminLTE
+
+
+Crear en routes
+nuevo archivo admin.php:   Para tener aqui todas las rutas de la parte administrativa
+
+comercial\app\Http\Controllers  :  aqui iran los controlodores de la parte administrativa
+
+En el archivo providers/RouteServiceProvider.php incluir para que reconozca este nuevo archivo de rutas
+                   Route::middleware('web', 'auth')
+                ->group(base_path('routes/admin.php'));
+
+
+Controlador para administrar esta ruta admin
+    php artisan make:controller Admin/HomeController        
+
+
+Instalacion Plantilla:
+        composer require jeroennoten/laravel-adminlte
+        php artisan adminlte:install
+
+El index se encuentra en admin/index.blade.php
+
+En config adminlte.php    aqui configuramos las opciones
+      

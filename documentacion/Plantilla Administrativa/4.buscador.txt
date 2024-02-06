@@ -1,0 +1,28 @@
+      <div class="card-header">
+            <input wire:model.live ="search" type="text" class="form-control" placeholder="Ingrese el nombre del post">
+        </div>
+
+
+        search es un atributo publico  declarado en el componente:   asi se conecta lo que se escribe en el input con el atributo
+
+        public function updatingSearch(){   $this->resetPage();  }   //Esto es lo que hace el enlace
+                    $this->resetPage();    es para que siempre haga busqueda desde la primera pagina
+
+        //asi se hace el filtro en la busqueda
+         $posts = Post::where('name', 'LIKE', '%' . $this->search . '%')
+
+
+
+         //----------
+
+           public function render()
+    {
+        $posts = Post::where('name', 'LIKE', '%' . $this->search . '%')
+        ->where('user_id', auth()->user()->id)
+        ->paginate(5);
+        return view('livewire.admin.posts-index',  compact('posts'));
+    }
+
+
+        ->where('user_id', auth()->user()->id)     //realiza busqueda por user_id  metodo auth()->user()->id  (queda el usuario logeado)
+        

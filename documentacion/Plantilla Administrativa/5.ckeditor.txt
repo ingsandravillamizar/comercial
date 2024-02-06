@@ -1,0 +1,18 @@
+https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/quick-start.html
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+
+
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
+
+Esto es para poder manejar un editor para que el usuario pueda colocar negrita, etc... 
+
