@@ -316,68 +316,102 @@ return [
             'route'         => 'admin.home',
             'icon'        => 'fas fa-digital-tachograph',
             'label_color' => 'success',
+        ],
 
-          
+        [
+            'text'    => 'Maestras Comercial',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Centros Costo',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Dependencias',
+                    'url'  => '#',
+                ],
 
+                [
+                    'text' => 'Puntos de Venta',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Responsables',
+                    'url'  => '#',
+                ],
+
+                // [
+                //     'text'    => 'level_one',
+                //     'url'     => '#',
+                //     'submenu' => [
+                //         [
+                //             'text' => 'level_two',
+                //             'url'  => '#',
+                //         ],
+                //         [
+                //             'text'    => 'level_two',
+                //             'url'     => '#',
+                //             'submenu' => [
+                //                 [
+                //                     'text' => 'level_three',
+                //                     'url'  => '#',
+                //                 ],
+                //                 [
+                //                     'text' => 'level_three',
+                //                     'url'  => '#',
+                //                 ],
+                //             ],
+                //         ],
+                //     ],
+                // ],
+                // [
+                //     'text' => 'level_one',
+                //     'url'  => '#',
+                // ],
+            ],
+         ],
+
+    
+        [
+            'text'    => 'Post',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+	            [
+                'text' => 'Categorias',
+                'route'  => 'admin.categories.index',
+                'icon' => 'fas fa-list-alt',
+                'active' => ['admin/categories*']
+                ],
+                [
+                'text' => 'Tags',
+                'route'  => 'admin.tags.index',
+                'icon' => 'fas fa-tags',
+                'icon_color' => 'red',
+                'active' => ['admin/tags*']
+                ],
 
         ],
-        ['header' => 'ADMINISTRACION'],
-        [
-            'text' => 'Categorias',
-            'route'  => 'admin.categories.index',
-            'icon' => 'fas fa-list-alt',
-            'active' => ['admin/categories*']
+         ],
+        
+        // [
+        //     'text' => 'Categorias',
+        //     'route'  => 'admin.categories.index',
+        //     'icon' => 'fas fa-list-alt',
+        //     'active' => ['admin/categories*']
 
-        ],
-        [
-            'text' => 'Tags',
-            'route'  => 'admin.tags.index',
-            'icon' => 'fas fa-tags',
-            'icon_color' => 'red',
-            'active' => ['admin/tags*']
+        // ],
+        // [
+        //     'text' => 'Tags',
+        //     'route'  => 'admin.tags.index',
+        //     'icon' => 'fas fa-tags',
+        //     'icon_color' => 'red',
+        //     'active' => ['admin/tags*']
 
            
-        ],
-
-
-        // [
-        //     'text'    => 'multilevel',
-        //     'icon'    => 'fas fa-fw fa-share',
-        //     'submenu' => [
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //         [
-        //             'text'    => 'level_one',
-        //             'url'     => '#',
-        //             'submenu' => [
-        //                 [
-        //                     'text' => 'level_two',
-        //                     'url'  => '#',
-        //                 ],
-        //                 [
-        //                     'text'    => 'level_two',
-        //                     'url'     => '#',
-        //                     'submenu' => [
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                         [
-        //                             'text' => 'level_three',
-        //                             'url'  => '#',
-        //                         ],
-        //                     ],
-        //                 ],
-        //             ],
-        //         ],
-        //         [
-        //             'text' => 'level_one',
-        //             'url'  => '#',
-        //         ],
-        //     ],
         // ],
+
+
+        
         ['header' => 'OPCIONES POSTS'],
         [
             'text'      => 'Lista de Post',
